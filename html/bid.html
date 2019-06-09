@@ -45,6 +45,11 @@
           <td class=price>$1.30 each</td>
         </tr>
         <tr>
+          <th>Complexity Fee</th>
+          <td>If your event has non-standard complexity, such as laps where each lap is completed by a different team relay member, there will be an additional fee to cover the added burden of programming the event. <b>Note:</b> This is not common.</td>
+          <td class=price>$50</td>
+        </tr>
+        <tr>
           <th>Results</th>
           <td>We will format results exactly how you'd like. For example, with age divisions, by team, overall, etc.</td>
           <td class="price">FREE</td>
@@ -61,4 +66,41 @@
         </tr>
       </tbody>
     </table>
+    <h1>Price Estimator</h1>
+    <form class="" method="get">
+      <fieldset oninput="total_price.value=(finish_price.value*1)+(start_price.value*1)+(check_price.value*1)+(participant_price.value*1)">
+        <legend>Total | $<output name="total_price"></output></legend>
+        <!-- Finish Lines -->
+        <fieldset oninput="finish_price.value=(add_finish.value*300)+(add_announcer.value*25)+(add_extension.value*25)">
+          <legend>Finish Lines | $<output name="finish_price"></output></legend>
+          A finish line is required to time an event<br>
+          How many finish lines?
+          <input type="number" name="add_finish" value="" min="1" placeholder="Typically just 1"><br>
+          How many announcer feeds?
+          <input type="number" name="add_announcer" value="" placeholder="Typically just 1"><br>
+          How many finish line extensions?
+          <input type="number" name="add_extension" value="" placeholder="Typically just 1"><br>
+        </fieldset>
+        <!-- Start Lines -->
+        <fieldset oninput="start_price.value=(add_start.value*300)+(add_gunstart.value*25)">
+          <legend>Start Lines | $<output name="start_price"></output></legend>
+          How many start lines?
+          <input type="number" name="add_start" value="" min="0" placeholder=""><b>Note:</b> Enter 0 to share the start line with the finish.<br>
+          How many gunstarts without a timing line?
+          <input type="number" name="add_gunstart" value="" min="0" placeholder=""><b>Note:</b> <span class="not_recommended">This is not recommended</span><br>
+        </fieldset>
+        <!-- Checkpoints -->
+        <fieldset oninput="check_price.value=(add_check.value*125)">
+          <legend>Checkpoints | $<output name="check_price"></output></legend>
+          How many checkpoints?
+          <input type="number" name="add_check" value="" min="0" placeholder=""><br>
+        </fieldset>
+        <!-- Participants -->
+        <fieldset oninput="participant_price.value=(add_participant.value*1.30)">
+          <legend>Participants | $<output name="participant_price"></output></legend>
+          How many participants?
+          <input type="number" name="add_participant" value="" min="0" step="10" placeholder=""><br>
+        </fieldset>
+      </fieldset>
+    </form>
   </body>
