@@ -11,7 +11,20 @@ img {
 	height: auto;
 }
 
+table {
+	border-collapse: collapse;
+}
+
 th, td {
 	border-bottom: 1px solid #ddd;
 	padding: 10px
+}
+
+td.price {
+	color: #777;
+}
+
+.not_recommended {
+	color: red;
+	font-weight: bold;
 }
