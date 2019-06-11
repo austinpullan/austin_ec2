@@ -6,11 +6,6 @@ h1{
 	text-align: center;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
 table {
 	border-collapse: collapse;
 }
@@ -27,4 +22,26 @@ td.price {
 .not_recommended {
 	color: red;
 	font-weight: bold;
+}
+
+.container{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.portfolio {
+	display: inline-block;
+	width: 40%;
+	clear: both;
+	margin: 0 auto;
+}
+
+.portfolio-img{
+	height: 75%;
+	overflow: scroll;
+}
+
+.portfolio img{
+	width: 100%;
 }
