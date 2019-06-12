@@ -34,7 +34,8 @@ td.price {
 	display: inline-block;
 	width: 40%;
 	clear: both;
-	margin: 0 auto;
+	margin: 20px;
+	padding: 20px;
 }
 
 .portfolio-img{
@@ -44,4 +45,15 @@ td.price {
 
 .portfolio img{
 	width: 100%;
+}
+
+@media only screen and (max-width: 480px){
+	.portfolio{
+		width: 90%;
+		margin: 0 auto;
+		height: 50%;
+	}
+
+	.portfolio img{
+	}
 }
